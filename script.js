@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from('.benefit', { duration: 1, y: 50, opacity: 0, stagger: 0.3, ease: 'power3.out' });
     gsap.from('.btn', { duration: 1, y: 100, opacity: 0, delay: 0.6, ease: 'power3.out' });
 
-    // Smooth scrolling for anchor links
     const headerHeight = document.querySelector('header').offsetHeight;
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
