@@ -1,0 +1,680 @@
+/* Global Styles */
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%; /* Sets the base font size to 10px (1rem = 10px) */
+}
+body {
+    scroll-padding-top: 7rem; /* Adjust based on the height of your header */
+}
+
+/* Header Section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    z-index: 1000; /* Ensure the header is above all other content */
+    background:rgb(17, 16, 16); /* Dark background for header */
+}
+.destinations, .packages, .contact {
+    padding: 2rem 9%;
+    position: relative;
+    margin-top: 7rem; /* Adjust this value based on your header height */
+}
+
+/* Ensure headings are visible when navigating to them */
+.destinations h2, .packages h2, .contact h2 {
+    scroll-margin-top: 7rem; /* Adjust this value based on your header height */
+}
+
+header .logo h1 {
+    color: #fff; /* White text color for the logo */
+    font-size: 3rem; /* Adjust font size as needed */
+}
+
+header #menu {
+    display: none; /* Hide menu by default on larger screens */
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar a {
+    font-size: 2rem; /* Font size for navigation links */
+    margin-right: 2rem; /* Space between links */
+    color: #fff; /* White text color for links */
+}
+
+header .navbar a:hover {
+    color: #d3ad7f; /* Change color on hover */
+}
+
+/* Apply scroll padding to body */
+body {
+    scroll-padding-top: 7rem; /* Adjust based on the height of your header */
+}
+
+/* Section Styles */
+.destinations, .packages, .contact {
+    padding: 2rem 9%;
+    position: relative;
+}
+
+
+/* General Section Styles */
+.home, .destinations, .packages, .contact {
+    padding: 2rem 9%;
+    position: relative; /* Ensure this */
+}
+/* Heading styles */
+.explore-heading {
+    font-size: 3rem; /* Adjust size as needed */
+    color:#fff;   /* Color for the rest of the heading */
+}
+
+.explore-heading .highlight {
+    color: #29768d; /* Blue color for the word "World" */
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Ensures the section takes at least 80% of the viewport height */
+    background-image: url('home.jpg'); /* Set your background image here */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #fff; /* Ensure text color is readable */
+    text-align: center; /* Center align text */
+    position: relative; /* Position relative for overlay */
+    z-index: 1;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    z-index: -1; /* Ensure overlay is behind content */
+    filter:brightness(1.2);
+}
+
+.home .content {
+    z-index: 2; /* Ensure content is above the overlay */
+    flex: 1;
+    max-width: 70rem; /* Control the maximum width of the content */
+    padding: 2rem;
+}
+
+.home .content .title {
+    font-size: 6rem; /* Large font size for the title */
+    color: #fff;
+    text-transform: uppercase; /* Uppercase text */
+}
+
+.home .content .title span {
+    color: #29768d; /* Highlighted color for span text */
+}
+
+.home .content .description {
+    font-size: 2rem; /* Font size for the description */
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff; /* Ensure text color is readable */
+}
+
+.home .content .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background:#29768d;  /* Button background color */
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none; /* Remove underline if it's a link */
+    border-radius: 5px; /* Optional: rounded corners for the button */
+}
+
+.home .content .btn:hover {
+    letter-spacing: .2rem;
+}
+
+/* Add margin-top to sections to account for fixed header */
+.destinations, .packages, .contact {
+    padding: 2rem 9%;
+    position: relative;
+    margin-top: 7rem; /* Adjust this value based on your header height */
+}
+/* Add scroll-margin-top to headings */
+.destinations h2, .packages h2, .contact h2 {
+    scroll-margin-top: 7rem; /* Adjust this value based on your header height */
+}
+
+.section {
+    padding-top: 10rem; /* Ensure this padding accommodates the fixed header */
+}
+/* General Section Styles */
+/* Destinations section */
+.destinations {
+    padding: 2rem 9%;
+}
+
+.destinations .content h2 {
+    font-size: 3rem;
+    color: #2a201c;
+    margin-bottom: 2rem; /* Space below the heading */
+}
+
+.destination-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between items */
+    justify-content: center; /* Center items horizontally */
+}
+
+.destination-items .item {
+    position: relative;
+    flex: 1 1 calc(25% - 2rem); /* Adjust width to fit four items per row, minus gap */
+    max-width: 25rem; /* Set maximum width */
+    text-align: center;
+    border: 2px solid #d3ad7f; /* Coffee color border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    overflow: hidden; /* Ensure content doesn't overflow the border */
+    height: 20rem; /* Set height if needed */
+}
+
+.destination-items .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    z-index: -1; /* Place image behind text */
+}
+
+.destination-items .item .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    color: #fff; /* White text color */
+    padding: 1rem;
+    text-align: center;
+    z-index: 1; /* Ensure info is on top of the image */
+}
+
+.destination-items .item .info .price {
+    font-size: 1.4rem; /* Adjust as needed */
+    font-weight: bold;
+    color: #ddd;
+}
+
+.destination-items .item .info .days {
+    font-size: 1.2rem; /* Adjust as needed */
+}
+
+.destination-items .item h3 {
+    font-size: 2rem;
+    margin-top: 1rem; /* Ensure spacing from the image */
+    color: #ddd;
+}
+
+.destination-items .item p {
+    font-size: 1.6rem;
+    color: #ddd;
+}
+
+.destination-items .item:hover {
+    border: 2px solid #2a201c;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+
+
+
+
+
+.packages {
+    background: #f4f4f4; /* Light gray background */
+    padding: 2rem 9%; /* Decreased padding */
+    text-align: center;
+}
+
+.packages .content h2 {
+    font-size: 3rem;
+    color: #2a201c;
+}
+
+.packages .content p {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.packages .content .btn {
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: #29768d; 
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.packages .content .btn:hover {
+    background: #2a201c;
+}
+
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 4rem 9%;
+    background: #fff; /* White background for contrast */
+    text-align: center;
+}
+
+.why-choose-us .content h2 {
+    font-size: 3rem;
+    color: #2a201c;
+    margin-bottom: 3rem;
+}
+
+.benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.benefit {
+    flex: 1 1 22%; /* Adjust the width of each benefit box */
+    background: #f9f9f9;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 20rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.benefit:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+}
+
+.benefit i {
+    font-size: 3rem;
+    color:#29768d; 
+    margin-bottom: 1rem;
+}
+
+.benefit h3 {
+    font-size: 2rem;
+    color: #2a201c;
+    margin-bottom: 1rem;
+}
+
+.benefit p {
+    font-size: 1.6rem;
+    color: #555;
+}
+
+
+/* General styling for reviews section */
+.reviews {
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.reviews .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 3rem; /* Add space below the content area */
+}
+.reviews .content h2 {
+    margin-bottom: 2rem; /* Add space below the heading */
+}
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Space between reviews */
+    justify-content: center;
+}
+
+.review {
+    background-color: #fff; /* White background for each review */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 1.5rem; /* Increased padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 350px;
+    width: 100%;
+}
+
+.review-text {
+    font-size: 1.25rem; /* Increased font size */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 1rem; /* Space below text */
+}
+
+.review-rating {
+    display: flex;
+    gap: 0.2rem; /* Space between stars */
+    margin-bottom: 1rem; /* Space below stars */
+}
+
+.review-rating i {
+    color: #ffcc00; /* Gold color for stars */
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between image and text */
+}
+.reviews h2 {
+    font-size: 2.5rem; /* Increase this value as needed */
+}
+
+.reviewer-info img {
+    border-radius: 50%; /* Circular reviewer image */
+    width: 60px; /* Increased image width */
+    height: 60px; /* Increased image height */
+    object-fit: cover; /* Crop image to fit */
+}
+
+.reviewer-info h3 {
+    margin: 0;
+    font-size: 1.25rem; /* Increased font size */
+    color: #333; /* Dark gray text color */
+}
+
+/* Modal Background */
+.sign-in-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Form Heading */
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sign-in button styles */
+.sign-in {
+    font-size: 1.7rem;
+    color: #fff;
+    background:  #29768d; 
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-transform: capitalize;
+    margin-left: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.sign-in:hover {
+    background: #c49e77;
+}
+
+/* Contact Section */
+.contact {
+    color: black;
+    padding: 4rem 9%;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    gap: 2rem; /* Space between text and image */
+}
+
+.contact .content {
+    flex: 1; /* Allows the content to take up available space */
+    max-width: 600px; /* Adjust width as needed */
+}
+
+.contact .content h2 {
+    font-size: 3rem; /* Increase font size for heading */
+    margin-bottom: 1.5rem; /* Space below the heading */
+}
+
+.contact .content p {
+    font-size: 1.8rem; /* Increase font size for paragraph text */
+    line-height: 1.8; /* Line height for readability */
+}
+
+.contact .image {
+    flex: 1; /* Allows the image container to take up available space */
+    text-align: right; /* Align image to the right */
+}
+
+.contact .image img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+
+
+/* Footer Section */
+.footer {
+    background:rgb(17, 16, 16);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .footer-content p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.footer .footer-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer .footer-icons a {
+    color:  #29768d; 
+    font-size: 2rem;
+}
+
+.footer .footer-icons a:hover {
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .home, .destinations, .packages, .contact {
+        padding: 1rem 5%;
+    }
+
+    .home .content .title {
+        font-size: 4rem;
+    }
+
+    .home .content .description {
+        font-size: 1.6rem;
+    }
+
+    .header .navbar {
+        flex-direction: column;
+        background:  #77cae4;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    .header .navbar.active {
+        right: 0;
+    }
+
+    .header #menu {
+        display: block; /* Show menu on small screens */
+    }
+
+    .header .navbar a {
+        margin: 1.5rem 0;
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
+    .destination-items .item {
+        flex: 1 1 80%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .content .title {
+        font-size: 3rem;
+    }
+
+    .home .content .description {
+        font-size: 1.4rem;
+    }
+
+    .home .content .btn {
+        font-size: 1.5rem;
+        padding: .8rem 2.5rem;
+    }
+
+    .destination-items .item {
+        flex: 1 1 100%;
+    }
+}
